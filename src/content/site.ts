@@ -13,7 +13,7 @@ export const site = {
   // ---- SEO / social (used in src/app/layout.tsx) ----
   seo: {
     title:
-      "Binit Koirala — Backend & DevOps Engineer | Django, Scalable Systems, Nepal",
+      "Binit Koirala — Co-founder, Backend & Mobile Engineer | Django, Flutter, DevOps, Nepal",
     description:
       "Binit Koirala is a backend & DevOps engineer and co-founder in Nepal. He builds scalable Django backends and cloud infrastructure at Fasto, and has shipped Flutter apps to the Play Store with 50,000+ downloads.",
     // OG/Twitter card is generated in code at src/app/opengraph-image.tsx

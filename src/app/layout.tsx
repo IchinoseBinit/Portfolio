@@ -50,7 +50,7 @@ const jsonLd = {
   "@type": "Person",
   name: site.name,
   url: site.url,
-  jobTitle: "Backend & DevOps Engineer, Co-founder",
+  jobTitle: "Co-founder, Backend & Mobile Engineer",
   worksFor: { "@type": "Organization", name: "Fasto" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Itahari International College" },
   address: { "@type": "PostalAddress", addressLocality: "Dharan / Kathmandu", addressCountry: "Nepal" },
