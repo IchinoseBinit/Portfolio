@@ -117,7 +117,8 @@ section{padding:clamp(80px,11vw,130px) 0;position:relative}
 p.sub{color:var(--muted);font-size:18px;margin:18px 0 0}
 
 /* about */
-.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:center}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:start}
+#about .section-head{margin-bottom:28px}
 .about-grid p{margin:0 0 18px;font-size:18.5px}.about-grid p:last-child{margin-bottom:0}
 .about-grid b{color:var(--text);font-weight:600}
 .about-aside{font-family:var(--fm);font-size:13.5px}

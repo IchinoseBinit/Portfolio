@@ -5,12 +5,12 @@ export default function About() {
   return (
     <section id="about">
       <div className="wrap">
-        <div className="section-head reveal">
-          <span className="eyebrow">About</span>
-          <h2>From the database to the deploy — I work across the whole stack.</h2>
-        </div>
         <div className="about-grid reveal">
           <div>
+            <div className="section-head">
+              <span className="eyebrow">About</span>
+              <h2>From the database to the deploy — I work across the whole stack.</h2>
+            </div>
             <p>
               I&apos;m <b>Binit Koirala</b> — a software engineer and co-founder in Nepal who works end to
               end, from <b>Django backends and DevOps pipelines</b> to the mobile apps people actually open.
