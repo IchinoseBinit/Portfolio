@@ -16,7 +16,8 @@ export const site = {
       "Binit Koirala — Backend & DevOps Engineer | Django, Scalable Systems, Nepal",
     description:
       "Binit Koirala is a backend & DevOps engineer and co-founder in Nepal. He builds scalable Django backends and cloud infrastructure at Fasto, and has shipped Flutter apps to the Play Store with 50,000+ downloads.",
-    // TODO: add a real 1200x630 image at /public/og/home.png
+    // OG/Twitter card is generated in code at src/app/opengraph-image.tsx
+    // (no static asset needed). This field is kept for reference only.
     ogImage: "/og/home.png",
     keywords: [
       "Binit Koirala",
@@ -34,7 +35,6 @@ export const site = {
     eyebrow: "Backend · DevOps · Co-founder — Nepal",
     // headline is in components/Hero.tsx (it has styled markup)
     lead: "Engineer and co-founder shipping Django backends, cloud infrastructure, and Flutter apps — built to scale, from Kathmandu to production.",
-    // TODO: replace with your real headshot at /public/images/binit.jpg
     portrait: "/images/binit.jpg",
     portraitAlt: "Binit Koirala — software engineer and co-founder",
   },
@@ -96,10 +96,9 @@ export const site = {
       idx: "/01",
       name: "Fasto",
       role: "Co-founder · Backend & DevOps",
-      // TODO: replace with the real Fasto product one-liner
-      desc: "The startup I co-founded. I own the backend and infrastructure — Django services, deployment, and CI/CD architected to scale with the product.",
+      desc: "Nepal's first quick-commerce platform — anything delivered in 10 minutes. As co-founder I own the backend and infrastructure: Django services, deployment, and CI/CD architected to scale with demand.",
       tags: ["Django", "Python", "DevOps", "CI/CD", "System design"],
-      href: "#contact",
+      href: "https://fasto.com.np",
     },
     {
       idx: "/02",
@@ -111,11 +110,11 @@ export const site = {
     },
     {
       idx: "/03",
-      name: "StretchYo",
+      name: "Sangatha",
       role: "Lead Flutter Developer",
-      desc: "A US-based habit-building app where I led mobile development end to end — architecture, features, and the release pipeline.",
+      desc: "A US-based habit-building app (formerly StretchYo) where I led mobile development end to end — architecture, features, and the release pipeline. Live on the Play Store.",
       tags: ["Flutter", "Dart", "CI/CD", "Push"],
-      href: "#contact",
+      href: "https://play.google.com/store/apps/details?id=com.goit.goit&hl=en",
     },
   ],
 
@@ -123,7 +122,7 @@ export const site = {
   experience: [
     { years: "2024 — Now", role: "Co-founder", org: "Fasto · backend & infrastructure", loc: "Kathmandu, Nepal" },
     { years: "2024 — Now", role: "Final-Year Project Supervisor", org: "Itahari International College", loc: "Itahari, Nepal" },
-    { years: "2023 — 2025", role: "Lead Flutter Developer", org: "StretchYo · habit-building app", loc: "California, US (remote)" },
+    { years: "2023 — 2025", role: "Lead Flutter Developer", org: "Sangatha (formerly StretchYo) · habit-building app", loc: "California, US (remote)" },
     { years: "2021 — 2024", role: "Flutter Developer → Senior", org: "Code Himalaya", loc: "Lalitpur, Nepal" },
     { years: "2022 — 2024", role: "Academic Tutor — App Development", org: "Islington College · VS International College", loc: "Kathmandu, Nepal" },
   ],
@@ -147,8 +146,7 @@ export const site = {
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/ichinosebinit",
-    // TODO: add your GitHub URL
-    github: "#",
+    github: "https://github.com/ichinosebinit",
     instagram: "https://www.instagram.com/ichinosebinit/",
     email: "mailto:binitkoirala17@gmail.com",
   },

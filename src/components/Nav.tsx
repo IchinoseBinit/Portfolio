@@ -19,7 +19,12 @@ export default function Nav() {
       <a className="brand" href="#top">
         binit<i>.</i>koirala
       </a>
-      <nav className={`links${open ? " open" : ""}`} onClick={() => setOpen(false)}>
+      <nav
+        id="primary-nav"
+        aria-label="Primary"
+        className={`links${open ? " open" : ""}`}
+        onClick={() => setOpen(false)}
+      >
         {site.nav.map((l) => (
           <a key={l.href} href={l.href}>
             {l.label}
@@ -31,8 +36,9 @@ export default function Nav() {
       </nav>
       <button
         className="menu-btn"
-        aria-label="Toggle menu"
+        aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
+        aria-controls="primary-nav"
         onClick={() => setOpen((v) => !v)}
       >
         {open ? "close" : "menu"}

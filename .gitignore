@@ -23,6 +23,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# claude code (local-only settings)
+.claude/settings.local.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

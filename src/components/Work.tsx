@@ -12,23 +12,31 @@ export default function Work() {
           </p>
         </div>
         <div className="work-list">
-          {site.work.map((w) => (
-            <a className="work reveal" href={w.href} key={w.name}>
-              <span className="idx">{w.idx}</span>
-              <span>
-                <h3>
-                  {w.name} <span className="role">{w.role}</span>
-                </h3>
-                <p>{w.desc}</p>
-                <span className="tags">
-                  {w.tags.map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
+          {site.work.map((w) => {
+            const external = w.href.startsWith("http");
+            return (
+              <a
+                className="work reveal"
+                href={w.href}
+                key={w.name}
+                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+              >
+                <span className="idx">{w.idx}</span>
+                <span>
+                  <h3>
+                    {w.name} <span className="role">{w.role}</span>
+                  </h3>
+                  <p>{w.desc}</p>
+                  <span className="tags">
+                    {w.tags.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </span>
                 </span>
-              </span>
-              <span className="go">details →</span>
-            </a>
-          ))}
+                <span className="go">{external ? "visit →" : "details →"}</span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
