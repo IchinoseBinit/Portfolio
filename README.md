@@ -1,7 +1,9 @@
 # Binit Koirala — Personal Site
 
-Personal / portfolio site for **Binit Koirala** — backend &amp; DevOps engineer and co-founder.
+Personal / portfolio site for **Binit Koirala** — co-founder and backend, mobile &amp; DevOps engineer.
 An SEO-focused "who I am" site, not a hire-me page.
+
+**Live:** [binitkoirala.com.np](https://binitkoirala.com.np) (deployed on Vercel, auto-deploys from `master`).
 
 Built with **Next.js (App Router) + TypeScript**, with the design ported 1:1 from an approved
 single-file prototype. No CSS framework — styles live in one global stylesheet driven by CSS
@@ -37,17 +39,20 @@ binit-portfolio/
 ├── next.config.mjs
 ├── tsconfig.json              # path alias: @/* -> ./src/*
 ├── public/
-│   ├── images/                # add binit.jpg here (hero headshot)
-│   └── og/                    # add home.png here (1200x630 share image)
+│   └── images/                # binit.jpg (hero headshot)
 ├── docs/
 │   ├── ARCHITECTURE.md        # how the app is wired (server vs client)
 │   ├── CONTENT-GUIDE.md       # how to edit every piece of text
 │   └── DEPLOYMENT.md          # deploy to Vercel + custom domain
 └── src/
     ├── app/
-    │   ├── layout.tsx         # fonts, SEO metadata, JSON-LD
+    │   ├── layout.tsx         # fonts, SEO metadata, JSON-LD, viewport
     │   ├── page.tsx           # composes the sections
     │   ├── globals.css        # design tokens + all component styles
+    │   ├── icon.svg           # favicon (gradient BK monogram)
+    │   ├── opengraph-image.tsx# OG/social card, generated in code
+    │   ├── twitter-image.tsx  # re-exports the OG card
+    │   ├── manifest.ts        # /manifest.webmanifest (PWA)
     │   ├── sitemap.ts         # /sitemap.xml
     │   └── robots.ts          # /robots.txt
     ├── components/            # one component per section (+ client helpers)
@@ -68,16 +73,17 @@ The three About paragraphs contain inline `<b>` emphasis, so they live directly 
 
 ---
 
-## Before you launch — TODO
+## Launch checklist — done
 
-These are also marked with `TODO` comments in the code:
+The site is live; all initial launch items are complete:
 
-- [ ] Add your headshot at `public/images/binit.jpg` (hero portrait; 4:5 crop)
-- [ ] Add a `1200x630` share image at `public/og/home.png`
-- [ ] Set your **GitHub URL** in `src/content/site.ts` → `socials.github`
-- [ ] Replace the **Fasto** one-liner in `site.ts` → `work[0].desc`
-- [ ] Add real **Play Store / app links** for the work items if you want them clickable
-- [ ] (Optional) add a favicon in `src/app/` (`icon.png` / `favicon.ico`)
+- [x] Hero headshot at `public/images/binit.jpg` (4:5 crop, optimized)
+- [x] OG/Twitter share card — generated in code (`src/app/opengraph-image.tsx`), no static asset
+- [x] **GitHub URL** + real **work links** (Fasto, Sangatha Play Store) in `site.ts`
+- [x] **Fasto** one-liner written
+- [x] Favicon (`src/app/icon.svg`) + web manifest + `theme-color`
+- [x] Custom domain `binitkoirala.com.np` (apex canonical) on Vercel with SSL
+- [x] Google Search Console verified (`GOOGLE_SITE_VERIFICATION` env var → meta tag)
 
 ---
 
@@ -97,9 +103,12 @@ These are also marked with `TODO` comments in the code:
 ## SEO
 
 - Per-page metadata + canonical via the Next.js Metadata API (`layout.tsx`).
-- Open Graph + `summary_large_image` Twitter cards.
+- Open Graph + `summary_large_image` Twitter cards, generated in code (`opengraph-image.tsx`).
 - `Person` JSON-LD structured data.
 - `sitemap.xml` and `robots.txt` generated from `site.url`.
+- Favicon (`icon.svg`), web manifest, and `theme-color` (dark) for mobile/PWA.
+- Google Search Console verification via the `GOOGLE_SITE_VERIFICATION` env var (emits the
+  meta tag only when set — configured in Vercel, not committed).
 
 The canonical/OG origin comes from `site.url` in `src/content/site.ts` — keep it set to the
 **production** domain.

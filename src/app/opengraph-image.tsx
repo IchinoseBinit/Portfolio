@@ -35,7 +35,7 @@ export default function OgImage() {
             fontWeight: 600,
           }}
         >
-          Backend · DevOps · Co-founder — Nepal
+          Backend · Mobile · DevOps · Co-founder — Nepal
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>

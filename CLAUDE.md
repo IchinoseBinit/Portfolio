@@ -4,8 +4,8 @@ Context and conventions for working on this repo with Claude Code.
 
 ## What this is
 
-The personal / portfolio site of **Binit Koirala** — a backend &amp; DevOps engineer and
-co-founder. It is an SEO-focused informational site (not a hire-me page). Single page,
+The personal / portfolio site of **Binit Koirala** — a co-founder and backend, mobile &amp;
+DevOps engineer. It is an SEO-focused informational site (not a hire-me page). Single page,
 multiple sections, dark immersive aesthetic.
 
 **Stack:** Next.js 14 (App Router) · TypeScript · plain CSS (no Tailwind) · `next/font`.
@@ -70,7 +70,8 @@ npm run build   # must pass before deploy
 npm run lint
 ```
 
-## Open TODOs
+## Status
 
-Search the repo for `TODO`. Currently: hero headshot, OG image, GitHub URL, Fasto one-liner,
-real app links.
+Live at **binitkoirala.com.np** (Vercel, apex canonical, auto-deploys from `master`). All
+initial launch TODOs are done — headshot, work links, GitHub URL, Fasto one-liner, favicon,
+in-code OG card, and Search Console verification are all in place. No open `TODO`s in the code.

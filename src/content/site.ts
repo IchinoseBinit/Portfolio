@@ -32,7 +32,7 @@ export const site = {
 
   // ---- hero ----
   hero: {
-    eyebrow: "Backend · DevOps · Co-founder — Nepal",
+    eyebrow: "Backend · Mobile · DevOps · Co-founder — Nepal",
     // headline is in components/Hero.tsx (it has styled markup)
     lead: "Engineer and co-founder shipping Django backends, cloud infrastructure, and Flutter apps — built to scale, from Kathmandu to production.",
     portrait: "/images/binit.jpg",
