@@ -190,6 +190,7 @@ footer{border-top:1px solid var(--brd);padding:34px 0;background:var(--bg-2)}
 @media (max-width:900px){
   .hero .wrap,.about-grid,.cards,.stack-grid,.contact{grid-template-columns:1fr}
   .hero{min-height:auto}
+  .portrait--hero{margin-left:auto;margin-right:auto}
   nav.links{display:none}
   nav.links.open{display:flex;flex-direction:column;align-items:flex-start;gap:4px;position:absolute;top:100%;right:var(--pad);left:var(--pad);background:rgba(7,7,16,.97);backdrop-filter:blur(12px);border:1px solid var(--brd);border-radius:14px;padding:16px 20px;margin-top:10px}
   nav.links.open a{padding:10px 0;width:100%;font-size:16px}
