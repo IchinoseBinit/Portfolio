@@ -15,7 +15,7 @@ export const site = {
     title:
       "Binit Koirala — Co-founder, Backend & Mobile Engineer | Django, Flutter, DevOps, Nepal",
     description:
-      "Binit Koirala is a backend & DevOps engineer and co-founder in Nepal. He builds scalable Django backends and cloud infrastructure at Fasto, and has shipped Flutter apps to the Play Store with 50,000+ downloads.",
+      "Binit Koirala is a software engineer and co-founder in Nepal working across backend, mobile and DevOps. He builds scalable Django backends and cloud infrastructure at Fasto — Nepal's first 10-minute quick-commerce platform — and has shipped Flutter apps to the Play Store with 50,000+ downloads.",
     // OG/Twitter card is generated in code at src/app/opengraph-image.tsx
     // (no static asset needed). This field is kept for reference only.
     ogImage: "/og/home.png",
