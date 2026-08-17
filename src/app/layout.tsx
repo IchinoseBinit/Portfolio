@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Syne, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
-import { schema } from "@/content/schema";
+import { siteGraph } from "@/content/schema";
 
 const syne = Syne({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-display", display: "swap" });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-body", display: "swap" });
@@ -62,8 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${syne.variable} ${inter.variable} ${mono.variable}`}>
       <body>
-        {/* Linked entity graph — see src/content/schema.ts */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        {/* Site-wide entity graph (Person / Fasto / WebSite) — see src/content/schema.ts.
+            Page-specific types (ProfilePage, FAQPage, BlogPosting) are emitted per page. */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }} />
         {children}
       </body>
     </html>

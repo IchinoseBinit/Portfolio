@@ -5,8 +5,8 @@ Context and conventions for working on this repo with Claude Code.
 ## What this is
 
 The personal / portfolio site of **Binit Koirala** — a co-founder and backend, mobile &amp;
-DevOps engineer. It is an SEO-focused informational site (not a hire-me page). Single page,
-multiple sections, dark immersive aesthetic.
+DevOps engineer. It is an SEO-focused informational site (not a hire-me page). A long home
+page plus dedicated topic pages and a blog, dark immersive aesthetic.
 
 **Stack:** Next.js 14 (App Router) · TypeScript · plain CSS (no Tailwind) · `next/font`.
 
@@ -17,7 +17,8 @@ multiple sections, dark immersive aesthetic.
 - Keep the site **content-driven**: text and data go in `src/content/site.ts`, not hard-coded
   in components, unless the copy needs inline markup (e.g. the About paragraphs).
 - Preserve `prefers-reduced-motion` handling whenever you touch animation.
-- Keep one `<h1>` on the page (it's in `Hero`). Section titles are `<h2>`.
+- Keep exactly one `<h1>` **per page**. On the home page it's in `Hero`; on sub-pages it's
+  rendered by `PageShell`. Section titles are `<h2>`.
 - This is plain CSS by design. If you introduce Tailwind or CSS Modules, do it deliberately and
   update the docs — don't half-migrate.
 
@@ -30,6 +31,9 @@ multiple sections, dark immersive aesthetic.
 | Colors / fonts / spacing / all styles | `src/app/globals.css` (tokens at top) |
 | SEO metadata, JSON-LD, fonts | `src/app/layout.tsx` |
 | Page section order | `src/app/page.tsx` |
+| Topic page copy (long-form) | `src/app/<slug>/page.tsx` |
+| Blog posts | `src/content/posts/<slug>.tsx` + register in `posts/index.ts` |
+| JSON-LD / structured data | `src/content/schema.ts` |
 | Hero headline markup | `src/components/Hero.tsx` |
 
 ## Server vs client components

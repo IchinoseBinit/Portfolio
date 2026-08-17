@@ -72,16 +72,19 @@ export const site = {
       n: "01",
       title: "Backend architecture",
       desc: "Django & Python services with clean data models and well-shaped APIs — the unglamorous reliability that keeps products up under load.",
+      href: "/django-developer-nepal",
     },
     {
       n: "02",
       title: "DevOps & infrastructure",
       desc: "CI/CD pipelines, deployment, and monitoring so releases ship fast and failures surface before users ever feel them.",
+      href: "/devops-engineer-nepal",
     },
     {
       n: "03",
       title: "Mobile engineering",
       desc: "Flutter apps taken to production and the Play Store — with payments, push notifications, and resilient, offline-aware UX.",
+      href: "/mobile-app-developer-nepal",
     },
     {
       n: "04",
@@ -151,11 +154,61 @@ export const site = {
     email: "mailto:binitkoirala17@gmail.com",
   },
 
+  // Root-relative hashes so these also work from /blog and the topic pages.
   nav: [
-    { label: "About", href: "#about" },
-    { label: "Work", href: "#work" },
-    { label: "Experience", href: "#experience" },
-    { label: "Stack", href: "#stack" },
+    { label: "About", href: "/#about" },
+    { label: "Work", href: "/#work" },
+    { label: "Experience", href: "/#experience" },
+    { label: "Stack", href: "/#stack" },
+    { label: "Blog", href: "/blog" },
+  ],
+
+  // ---- topic pages (src/app/<slug>/page.tsx) ----
+  // Linked from the Expertise cards; each has its own long-form page.
+  topics: [
+    {
+      slug: "django-developer-nepal",
+      label: "Django & backend",
+      title: "Django Developer in Nepal",
+    },
+    {
+      slug: "mobile-app-developer-nepal",
+      label: "Flutter & mobile",
+      title: "Mobile App Developer in Nepal",
+    },
+    {
+      slug: "devops-engineer-nepal",
+      label: "DevOps & infrastructure",
+      title: "DevOps Engineer in Nepal",
+    },
+  ],
+
+  // ---- FAQ (components/Faq.tsx + FAQPage schema) ----
+  faq: [
+    {
+      q: "Who is Binit Koirala?",
+      a: "Binit Koirala is a software engineer and co-founder based in Nepal. He works across the full stack of production systems — Django backends, cloud infrastructure and DevOps, and Flutter mobile apps. He co-founded Fasto, Nepal's first quick-commerce platform, where he owns the backend and infrastructure.",
+    },
+    {
+      q: "What does Binit Koirala do at Fasto?",
+      a: "At Fasto he is a co-founder responsible for the backend and infrastructure: Django services, database design, deployment, CI/CD, and the monitoring that keeps 10-minute delivery reliable as order volume grows.",
+    },
+    {
+      q: "What technologies does Binit Koirala work with?",
+      a: "On the backend: Django, Python, REST APIs and PostgreSQL. For infrastructure: Docker, Linux, CI/CD pipelines, deployment and monitoring. On mobile: Flutter and Dart with Firebase, push notifications and payment gateway integrations.",
+    },
+    {
+      q: "Has Binit Koirala shipped apps to the Play Store?",
+      a: "Yes. He has shipped Flutter apps to the Google Play Store with more than 50,000 combined downloads, including work at Code Himalaya and leading mobile development for Sangatha (formerly StretchYo), a US-based habit-building app.",
+    },
+    {
+      q: "Where is Binit Koirala based?",
+      a: "He is based in Nepal, between Kathmandu and Dharan, and has worked with teams remotely including a US-based product team in California.",
+    },
+    {
+      q: "How can I contact Binit Koirala?",
+      a: "The contact section of this site lists his email, phone and LinkedIn. Email is the most reliable way to reach him.",
+    },
   ],
 } as const;
 
