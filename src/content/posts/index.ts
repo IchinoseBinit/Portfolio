@@ -12,6 +12,9 @@
 import FlutterBadNetworksNepal, {
   meta as flutterBadNetworksNepal,
 } from "./flutter-bad-networks-nepal";
+import PostgresSchemaDesignDjango, {
+  meta as postgresSchemaDesignDjango,
+} from "./postgres-schema-design-django";
 import ShippingMobileAppNepal, {
   meta as shippingMobileAppNepal,
 } from "./shipping-a-mobile-app-in-nepal";
@@ -29,10 +32,13 @@ export type PostMeta = {
 export type Post = PostMeta & { Body: () => React.JSX.Element };
 
 export const posts: Post[] = [
+  { ...postgresSchemaDesignDjango, Body: PostgresSchemaDesignDjango },
   { ...shippingMobileAppNepal, Body: ShippingMobileAppNepal },
   { ...flutterBadNetworksNepal, Body: FlutterBadNetworksNepal },
   { ...whyDjangoGetsSlow, Body: WhyDjangoGetsSlow },
-].sort((a, b) => (a.date < b.date ? 1 : -1));
+  // Newest first. Equal dates return 0 so the (stable) sort keeps registry order —
+  // add new posts at the top of the array.
+].sort((a, b) => (a.date === b.date ? 0 : a.date < b.date ? 1 : -1));
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
 

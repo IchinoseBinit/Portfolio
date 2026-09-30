@@ -26,7 +26,6 @@ covers genuinely different ground and coverage compounds safely.
 
 | Topic | Target query | Angle |
 | --- | --- | --- |
-| Designing a Postgres schema you won't regret | postgresql developer nepal, database design | Constraints, indexes and the migrations that get expensive later |
 | REST API design for mobile clients | rest api development nepal | Chatty endpoints, pagination, versioning — written from having consumed his own APIs |
 | Docker for small teams without a platform engineer | docker nepal, devops nepal | What's worth containerising and what isn't at small scale |
 | Background jobs and queues in Django | django celery nepal, python backend | When work leaves the request cycle, retries, idempotency |
@@ -63,3 +62,6 @@ covers genuinely different ground and coverage compounds safely.
 - `flutter-bad-networks-nepal` — timeouts, optimistic updates, retries, offline-aware
 - `shipping-a-mobile-app-in-nepal` — post-launch reality: store review, staged rollouts,
   payment reconciliation, push delivery, device fragmentation
+- `postgres-schema-design-django` — DB-level constraints vs Django validation, types that are
+  costly to change (bigint PKs, numeric money, timestamptz, enums), paisa/rupee units and the
+  UTC+5:45 day boundary, composite/partial indexes, lock-safe migrations
