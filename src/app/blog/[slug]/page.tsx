@@ -8,8 +8,12 @@ export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getPost(params.slug);
+// Next 15: route params are async.
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) return {};
   return {
     title: `${post.title} — Binit Koirala`,
@@ -26,8 +30,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const post = getPost(params.slug);
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) notFound();
   const { Body } = post;
 
