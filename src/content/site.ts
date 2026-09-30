@@ -206,6 +206,18 @@ export const site = {
       a: "He is based in Nepal, between Kathmandu and Dharan, and has worked with teams remotely including a US-based product team in California.",
     },
     {
+      q: "What does Binit build?",
+      a: "Binit builds production systems end to end — Django backends and the infrastructure they run on, plus Flutter apps for Android and iOS. At Fasto that means the services behind 10-minute delivery; before that it meant shipping mobile apps that passed 50,000+ downloads on the Play Store.",
+    },
+    {
+      q: "Is Binit an app developer?",
+      a: "Yes. Binit has worked as a Flutter app developer since 2021 — first at Code Himalaya, where he grew from developer to senior, then leading mobile development for Sangatha, a US-based habit-building app. His apps are live on the Google Play Store.",
+    },
+    {
+      q: "What should you look for in an app developer in Nepal?",
+      a: "Ask what they have actually shipped to a store and then kept running, rather than what they have built. Production mobile work is judged on what breaks after launch: payment flows that fail halfway, push notifications dropped by aggressive battery optimisation, and apps that stall on a weak mobile connection. A developer who can talk concretely about those has shipped something real; one who only discusses features has not.",
+    },
+    {
       q: "How can I contact Binit Koirala?",
       a: "The contact section of this site lists his email, phone and LinkedIn. Email is the most reliable way to reach him.",
     },
