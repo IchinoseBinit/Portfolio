@@ -45,7 +45,6 @@ covers genuinely different ground and coverage compounds safely.
 | Topic | Target query | Angle |
 | --- | --- | --- |
 | Flutter state management, chosen not defaulted | flutter developer nepal | Tradeoffs rather than a tutorial |
-| Play Store releases: the parts nobody documents | publish app nepal, play store | Review cycles, staged rollouts, forced updates |
 | Firebase: where it helps and where it traps you | firebase nepal | Lock-in and cost at scale |
 
 ## Priority 4 — sector and career
@@ -62,3 +61,5 @@ covers genuinely different ground and coverage compounds safely.
 
 - `why-django-gets-slow` — N+1, indexes, sync work, caching
 - `flutter-bad-networks-nepal` — timeouts, optimistic updates, retries, offline-aware
+- `shipping-a-mobile-app-in-nepal` — post-launch reality: store review, staged rollouts,
+  payment reconciliation, push delivery, device fragmentation

@@ -12,6 +12,9 @@
 import FlutterBadNetworksNepal, {
   meta as flutterBadNetworksNepal,
 } from "./flutter-bad-networks-nepal";
+import ShippingMobileAppNepal, {
+  meta as shippingMobileAppNepal,
+} from "./shipping-a-mobile-app-in-nepal";
 import WhyDjangoGetsSlow, { meta as whyDjangoGetsSlow } from "./why-django-gets-slow";
 
 export type PostMeta = {
@@ -26,6 +29,7 @@ export type PostMeta = {
 export type Post = PostMeta & { Body: () => React.JSX.Element };
 
 export const posts: Post[] = [
+  { ...shippingMobileAppNepal, Body: ShippingMobileAppNepal },
   { ...flutterBadNetworksNepal, Body: FlutterBadNetworksNepal },
   { ...whyDjangoGetsSlow, Body: WhyDjangoGetsSlow },
 ].sort((a, b) => (a.date < b.date ? 1 : -1));
