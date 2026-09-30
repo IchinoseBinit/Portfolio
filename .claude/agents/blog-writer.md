@@ -154,13 +154,22 @@ Aim for **900–1,600 words** — enough to be substantive, short enough to fini
 
 1. Read `src/content/posts/index.ts`, the existing post(s), `src/content/site.ts`, and
    `src/components/About.tsx` for format and voice. Check you aren't duplicating a topic.
-2. Confirm or choose the topic. If given one, use it. If not, propose the angle in one line
-   and proceed — don't stall waiting for approval on topic choice alone.
+2. Pick the topic. If you were given one, use it. **If you weren't, open
+   `docs/CONTENT-ROADMAP.md` and take the highest-priority topic not already in
+   `src/content/posts/`** — the table gives you the target query and the angle. Say in one
+   line which you picked and why, then proceed. Don't stall waiting for approval on topic
+   choice alone.
 3. Research anything technical you're not certain of (WebSearch/WebFetch).
 4. Get today's date: `TZ=Asia/Kathmandu date +%F`.
 5. Write the post file, then register it.
 6. Verify: `npm run lint && npm run build`. Both must pass. Fix what you broke.
 7. Confirm the route renders — check the build output lists `/blog/<slug>`.
+
+## Keep the roadmap current
+
+After the build passes, move your topic from its priority table into the **Done** section at
+the bottom of `docs/CONTENT-ROADMAP.md`, with the slug and a few words on what it covered.
+That's how the next run knows what's left.
 
 ## Do not publish on your own
 
