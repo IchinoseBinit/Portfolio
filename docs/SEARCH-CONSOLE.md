@@ -28,7 +28,7 @@ No password is shared, and access can be revoked from Search Console at any time
 
 5. **Grant it access in Search Console.** Copy the service account's email (it ends in
    `.iam.gserviceaccount.com` — shown on the service account page and inside the JSON as
-   `client_email`). Then Search Console → property **https://binitkoirala.com.np** →
+   `client_email`). Then Search Console → property **binitkoirala.com.np** →
    *Settings → Users and permissions → Add user* → paste the email → permission **Full**.
    (*Restricted* is read-only and can't submit sitemaps.)
 
@@ -44,8 +44,8 @@ No password is shared, and access can be revoked from Search Console at any time
 | `npm run gsc -- perf [days]` | Top queries and pages, clicks/impressions/CTR/position |
 | `npm run gsc -- inspect [url…]` | Index status for each URL (defaults to the whole sitemap) |
 
-If your property is a **Domain** property rather than URL-prefix, run with
-`GSC_SITE=sc-domain:binitkoirala.com.np`.
+The property is a **Domain** property (`sc-domain:binitkoirala.com.np`), which the script uses by
+default. Override with `GSC_SITE` if that ever changes.
 
 ## What the API can't do
 

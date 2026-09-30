@@ -21,8 +21,10 @@ import { existsSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-const SITE = process.env.GSC_SITE ?? "https://binitkoirala.com.np/";
-const SITEMAP = `${SITE.replace(/\/$/, "")}/sitemap.xml`;
+// The verified property is a Domain property, not URL-prefix.
+const SITE = process.env.GSC_SITE ?? "sc-domain:binitkoirala.com.np";
+const ORIGIN = "https://binitkoirala.com.np";
+const SITEMAP = `${ORIGIN}/sitemap.xml`;
 const KEY = process.env.GSC_KEY_FILE ?? path.join(os.homedir(), ".config/gsc/service-account.json");
 
 if (!existsSync(KEY)) {
@@ -86,7 +88,7 @@ const commands = {
       console.log(`${pad(dim, 58)} ${pad("clicks", 7)} ${pad("impr", 7)} ${pad("ctr", 7)} pos`);
       for (const r of data.rows ?? []) {
         console.log(
-          `${pad(r.keys[0].replace(SITE.replace(/\/$/, ""), "") || "/", 58)} ` +
+          `${pad(r.keys[0].replace(ORIGIN, "") || "/", 58)} ` +
             `${pad(r.clicks, 7)} ${pad(r.impressions, 7)} ${pad((r.ctr * 100).toFixed(1) + "%", 7)} ${r.position.toFixed(1)}`
         );
       }
