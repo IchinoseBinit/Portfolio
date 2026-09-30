@@ -30,3 +30,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+
+# Search Console service-account keys — never commit (script reads from ~/.config/gsc/)
+*service-account*.json
+gsc-key*.json
